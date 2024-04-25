@@ -1,3 +1,4 @@
+import 'package:demo2/pages/details.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../pages/card.dart';
@@ -34,6 +35,11 @@ final router = GoRouter(
             path: '/write',
             name: 'write',
             builder: (context, state) => const WritePage(),
+          ),
+          GoRoute(
+            path: '/details',
+            name: 'details',
+            builder: (context, state) => const DetailsPage(),
           ),
         ]),
   ],
