@@ -13,10 +13,9 @@ dependencies:
   mysql1: ^0.20.0
 ```
 首先设计了一个创作页面
-![创作页面设计](https://raw.githubusercontent.com/bodyzxy/image/main/%E5%88%9B%E4%BD%9C.png?token=GHSAT0AAAAAACRPBEBHD27ECAAUOJAREW6QZRKIHWQ)
+![alt text](image/创作.png)
 
 然后还有一个卡片的页面
-
-![卡片页面设计](https://raw.githubusercontent.com/bodyzxy/image/main/%E5%8D%A1%E7%89%87.png?token=GHSAT0AAAAAACRPBEBHBGWAAP23T5EZGOBGZRKIL6Q)
+![alt text](image/卡片.png)
 
 其中“首页”，“卡片”，“本地”，“创作”的跳转实现，下一步设计每个页面的详细内容，数据库打算用mysql实现，但是需要注意，官方给定的mysql支持的mysql服务器版本较低，不能使用太高的，否则会造成数据的无法添加。
