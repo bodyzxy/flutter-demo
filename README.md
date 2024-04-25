@@ -1,16 +1,22 @@
-# demo2
+# flutter-demo
 
-A new Flutter project.
+本项目是学习flutter时用来练手创建的项目，正在一天天完成这个APP；主要是用来熟悉和使用flutter；忘大家一起监督学习。
 
-## Getting Started
+## 卡片及创作页面的设计
+使用到的包，mysql暂时还为写完，只是完成了基本的连接
+```
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  go_router: ^12.0.0
+  mysql1: ^0.20.0
+```
+首先设计了一个创作页面
+![创作页面设计](https://raw.githubusercontent.com/bodyzxy/image/main/%E5%88%9B%E4%BD%9C.png?token=GHSAT0AAAAAACRPBEBHD27ECAAUOJAREW6QZRKIHWQ)
 
-This project is a starting point for a Flutter application.
+然后还有一个卡片的页面
 
-A few resources to get you started if this is your first Flutter project:
+![卡片页面设计](https://raw.githubusercontent.com/bodyzxy/image/main/%E5%8D%A1%E7%89%87.png?token=GHSAT0AAAAAACRPBEBHBGWAAP23T5EZGOBGZRKIL6Q)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+其中“首页”，“卡片”，“本地”，“创作”的跳转实现，下一步设计每个页面的详细内容，数据库打算用mysql实现，但是需要注意，官方给定的mysql支持的mysql服务器版本较低，不能使用太高的，否则会造成数据的无法添加。
