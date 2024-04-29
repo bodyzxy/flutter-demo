@@ -34,7 +34,7 @@ final router = GoRouter(
           GoRoute(
             path: '/write',
             name: 'write',
-            builder: (context, state) => const WritePage(),
+            builder: (context, state) => WritePage(),
           ),
           GoRoute(
             path: '/details',
