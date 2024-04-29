@@ -1,5 +1,4 @@
 import 'package:demo2/model/detailsModel.dart';
-import 'package:demo2/pages/local.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

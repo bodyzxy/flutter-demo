@@ -1,9 +1,4 @@
-import 'package:demo2/model/adapter/detailsPageAdapter.dart';
-import 'package:demo2/model/detailsModel.dart';
-import 'package:demo2/pages/card.dart';
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:hive/hive.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({super.key});

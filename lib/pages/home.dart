@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatefulWidget {
   Widget child;
   HomePage({super.key, required this.child});
