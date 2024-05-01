@@ -12,6 +12,7 @@ dependencies:
   go_router: ^12.0.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  google_fonts: ^6.2.1
 ```
 首先设计了一个创作页面
 
@@ -39,3 +40,19 @@ dependencies:
 
 
 ![alt text](image/创作1.png)
+
+
+## 第三天
+今天完成卡片页面的显示以及详细页面的显示，可以通过点击卡片显示详细页面
+
+
+![alt text](image/卡片详情.png)
+
+
+同时在详情页面使用了google的插件来显示个性字体
+
+
+![alt text](image/详情页面.png)
+
+
+至此本项目基本完成，还有部分功能尚未实现，在后面继续学习的路上会不断进行更新。

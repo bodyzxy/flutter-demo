@@ -1,6 +1,9 @@
+import 'package:demo2/model/detailsModel.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../res/list_image.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+
+const String mainBox = "mainBox";
 
 class CardPage extends StatefulWidget {
   const CardPage({super.key});
@@ -10,10 +13,13 @@ class CardPage extends StatefulWidget {
 
 class _CardPageState extends State<CardPage> {
   List<Widget> _initCardWord() {
-    var templast = images.map((v) {
+    final Box<detailsModel> detailModel = Hive.box<detailsModel>(mainBox);
+    var templast = detailModel.values.map((detailsModel card) {
       return InkWell(
         onTap: () {
-          context.goNamed("details");
+          final encodedTitle = Uri.encodeComponent(card.title);
+          final encodedWrites = Uri.encodeComponent(card.writes);
+          context.go('/details/$encodedTitle/$encodedWrites');
         },
         child: Card(
           shape:
@@ -24,14 +30,16 @@ class _CardPageState extends State<CardPage> {
             children: [
               AspectRatio(
                 aspectRatio: 17 / 9,
-                child: Image.asset(v["image"], fit: BoxFit.cover),
+                child: Image.asset("./lib/images/2.png", fit: BoxFit.cover),
               ),
               ListTile(
-                leading: CircleAvatar(
-                  backgroundImage: AssetImage(v["image"]),
+                leading: const CircleAvatar(
+                  backgroundImage: AssetImage("./lib/images/2.png"),
                 ),
-                title: Text(v["name"]),
-                subtitle: Text(v["auther"]),
+                title: Text(card.title),
+                subtitle: Text(card.writes.length > 10
+                    ? '${card.writes.substring(0, 10)}....'
+                    : card.writes),
               ),
             ],
           ),

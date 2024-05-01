@@ -37,9 +37,13 @@ final router = GoRouter(
             builder: (context, state) => WritePage(),
           ),
           GoRoute(
-            path: '/details',
+            path: '/details/:title/:writes',
             name: 'details',
-            builder: (context, state) => const DetailsPage(),
+            builder: (context, state) {
+              final title = state.pathParameters['title']!;
+              final writes = state.pathParameters['writes']!;
+              return DetailsPage(title: title, writes: writes);
+            },
           ),
         ]),
   ],
